@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../style.module.css";
-import Todo from "./Todo";
+import TodoList from "./TodoList";
+import shortid from "shortid";
 
 const Form = ({ todo, setTodo, todoList, setTodoList }) => {
   const handleChange = (event) => {
@@ -8,7 +9,8 @@ const Form = ({ todo, setTodo, todoList, setTodoList }) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    setTodoList([...todoList, todo]);
+    setTodo("");
+    setTodoList([...todoList, { name: todo, id: shortid.generate() }]);
   };
   return (
     <div className={styles.todoform}>
@@ -24,7 +26,6 @@ const Form = ({ todo, setTodo, todoList, setTodoList }) => {
           Add
         </button>
       </form>
-      <Todo />
     </div>
   );
 };
