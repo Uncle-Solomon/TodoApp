@@ -26,12 +26,18 @@ body {
 }
 .todobutton {
   width: 100%;
-  border: none;
+  border: 1px solid tomato;
   height: 50px;
   background-color: tomato;
   font-size: 1.1em;
   color: white;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.todobutton:hover {
+  background-color: transparent;
+  color: black;
 }
 
 .todoitem {
@@ -41,14 +47,18 @@ body {
   margin-top: 20px;
 }
 
-.todoname {
-}
-
 .deletebutton {
-  border: none;
+  border: 1px solid tomato;
   height: 50px;
   background-color: tomato;
   color: white;
   width: 100px;
   border-radius: 2px;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.deletebutton:hover {
+  background-color: transparent;
+  color: black;
 }

@@ -21,7 +21,7 @@ const Form = ({ todo, setTodo, todoList, setTodoList }) => {
           className={styles.todoinput}
           placeholder="Add Todo Item"
           type="text"
-        ></input>
+        />
         <button className={styles.todobutton} type="submit">
           Add
         </button>
